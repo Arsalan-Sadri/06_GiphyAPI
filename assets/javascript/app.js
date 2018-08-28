@@ -16,13 +16,25 @@ function addBtn(topic) {
     $(".btn-row").append(btn);
 }
 //
+var limit = 10;
 $('button[type="submit"]').on("click", function (event) {
     event.preventDefault();
-    var userInput = $("input").val().trim();
-    if (userInput !== "") addBtn(userInput);
-    $("input").val("");
 
+    var userLimit = $('input[name="limit-input"]').val().trim();
+    var userLimitNum = parseInt(userLimit);
+    if (userLimitNum > 0) limit = userLimitNum;
+    $('input[name="limit-input"]').val("");
+
+    var userInput = $('input[name="search-term"]').val().trim();
+    if (userInput !== "") addBtn(userInput);
+    $('input[name="search-term"]').val("");
 })
+//
+
+
+
+
+
 // 
 $(document.body).on("click", ".img-class", function () {
     if ($(this).attr("img-static") === "True") {
@@ -33,7 +45,7 @@ $(document.body).on("click", ".img-class", function () {
         $(this).attr("img-static", "True");
     }
 });
-// Adding click event listener 
+// Adding click event listener
 $(document.body).on("click", ".fetch-gif", function () {
     $(".col-sm-9").empty();
     // Grabbing and storing the data property value from the button
@@ -41,7 +53,7 @@ $(document.body).on("click", ".fetch-gif", function () {
 
     // Constructing a queryURL using the btnData name
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-        btnData + "&api_key=2MnPgQlfrGbyTj7jZyIqCk6SdjMeFSPE&limit=10";
+        btnData + "&api_key=2MnPgQlfrGbyTj7jZyIqCk6SdjMeFSPE&limit=" + limit;
 
     // Performing an AJAX request with the queryURL
     $.ajax({
@@ -76,12 +88,8 @@ $(document.body).on("click", ".fetch-gif", function () {
                 imgTag.attr("src", gifArr[i].images.fixed_height_still.url);
                 imgTag.addClass("img-class");
 
-
-                // 
-
                 imgDiv.append(imgTag);
 
-                // 
                 $(".col-sm-9").append(imgDiv);
 
             }
