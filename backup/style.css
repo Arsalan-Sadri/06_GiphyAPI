@@ -1,0 +1,13 @@
+.btnRow {}
+
+.col-left {
+    float: left;
+    width: 80%;
+}
+.col-right {
+    float:right;
+    width: 20%;
+}
+input {
+    display: block;
+}
