@@ -1,3 +1,4 @@
+// 
 var topicsArr = [
     "Washington DC", "Chicago", "Los Angeles", "Vancouver", "Toronto", "London", "Berlin", "Budapest",
     "Vienna", "Tehran", "Hong Kong", "Grand Canyon", "Paris", "Istanbul", "Dubai", "Barcelona",
