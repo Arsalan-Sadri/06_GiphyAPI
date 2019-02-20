@@ -23,7 +23,7 @@
 
 
 # :nut_and_bolt: Tools and Technologies
-* Languages, libraries, and frameworks: `HTML`, `CSS`, `JavaScript`, `jQuery`
+* Languages, libraries, and frameworks: `HTML`, `CSS`, `JavaScript`, `jQuery`, `Bootstrap`
 * API: `GIPHY API`
 * Version control: `Git`
 * Editor: `Visual Studio Code`
