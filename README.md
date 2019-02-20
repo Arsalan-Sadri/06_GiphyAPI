@@ -23,16 +23,11 @@
 
 
 # :nut_and_bolt: Tools and Technologies
-* Languages, libraries, and frameworks
-  * `HTML`, `CSS`, `JavaScript`, `jQuery`
-* APIs
-  * `GIPHY API`
-* Version control
-  * `Git`
-* Editor
-  * `Visual Studio Code`
-* Operating System
-  * `Mac OS`
+* Languages, libraries, and frameworks: `HTML`, `CSS`, `JavaScript`, `jQuery`
+* API: `GIPHY API`
+* Version control: `Git`
+* Editor: `Visual Studio Code`
+* Operating System: `Mac OS`
 
 # :arrow_forward: Application Deployed
 * See the [application]() up and running via GitHub Pages directly from its depository. 
