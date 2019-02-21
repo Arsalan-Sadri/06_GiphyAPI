@@ -7,8 +7,7 @@
 # :page_with_curl: Description
 * A web app that populates with gifs of your choice via the GIPHY API
 * To dynamically change the HTML of the page with the use of GIPHY API, JavaScript, and jQuery 
-* As it can be seen below, there are a number of topics you can choose from
-* The theme for the topics is "location"
+* As it can be seen below, there are a number of topics you can choose from and the current theme is "location"
 
 <img src="Docs/Images/main_page.png" >
 
