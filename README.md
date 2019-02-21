@@ -5,9 +5,10 @@
   * Find all deployed applications 
 
 # :page_with_curl: Description
-* Using the GIPHY API to make a dynamic web page that populates with gifs of your choice 
-* With the help of GIPHY API and use of JavaScript and jQuery to change the HTML of the page
-* As you can see below, there are a number of locations you can choose from
+* A web app that populates with gifs of your choice via the GIPHY API
+* To dynamically change the HTML of the page with the use of GIPHY API, JavaScript, and jQuery 
+* As it can be seen below, there are a number of topics you can choose from
+* The theme for the topics is "location"
 
 <img src="Docs/Images/main_page.png" >
 
@@ -17,9 +18,10 @@
 <img src="Docs/Images/paris_search.png" >
 
 
-* You can then click on each gif to make it animate and click again to stop animation
-* You also have options to choose your own topic of interest and/or modify the number of gifs to be pulled
-* Once you enter your search term and click submit, it will be added to the list of search pool on the top
+* You can then click on each gif to make it animate and click again to stop the animation
+* You also have options to choose your own topic of interest and/or modify the number of gifs to be pulled from GIPHY API
+* Once you enter your search term and click submit, the search term will be added to the list at the top of the page
+* You can then click this newly-added search term to make the page populate gifs
 
 
 # :nut_and_bolt: Tools and Technologies
