@@ -12,19 +12,19 @@ for (i = 0; i < topicsArr.length; i++) {
 function addBtn(topic) {
     var btn = $("<button>").text(topic);
     btn.attr("btn-data", topic);
-    btn.addClass("btn btn-primary btn-sm");
+    btn.addClass("btn btn-info btn-sm");
     btn.addClass("fetch-gif");
-    $(".btn-row").append(btn);
+    $(".topics-row").append(btn);
 }
 //
 var limit = 10;
 $('button[type="submit"]').on("click", function (event) {
     event.preventDefault();
 
-    var userLimit = $('input[name="limit-input"]').val().trim();
+    var userLimit = $('input[name="input-cap"]').val().trim();
     var userLimitNum = parseInt(userLimit);
     if (userLimitNum > 0) limit = userLimitNum;
-    $('input[name="limit-input"]').val("");
+    $('input[name="input-cap"]').val("");
 
     var userInput = $('input[name="search-term"]').val().trim();
     if (userInput !== "") addBtn(userInput);

@@ -44,21 +44,41 @@
             <h1>Welcome to GIPHY API Web App</h1>
         </div>
         <div class="container">
-            <div class="btn-row"></div>
+            <!-- ********** INPUT ROW ********** -->
+            <div class="row">
+                <div class="col">
+                    <span>Enter a search term: </span>
+                    <input type="text" name="search-term" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <span
+                        >Enter the number of gifs:
+                    </span>
+                    <input type="text" name="input-cap" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button type="submit" class="btn btn-primary btn-sm m-0 mt-2">
+                        Submit
+                    </button>
+                </div>
+            </div>
+
+            <!-- ********** TOPICS ROW ********** -->
+            <div class="row my-5 topics-row"></div>
+
+            <!-- ********** GIFS ROW ********** -->
             <div class="row">
                 <div class="col-sm-9">
                     <div id="gifs-appear-here"></div>
                 </div>
-                <div class="col-sm-3">
-                    <p>1- Enter the number of gifs you want to fetch (optional)</p>
-                    <input type="text" name="limit-input" />
-                    <p>2- Enter a search term and press submit</p>
-                    <input type="text" name="search-term" />
-                    <button type="submit" class="btn btn-success btn-sm">Submit</button>
-                </div>
             </div>
         </div>
-        <!---------------- MAIN SCRIPT ---------------->
+
+        <!-- ********** MAIN SCRIPT ********** -->
         <script src="assets/javascript/app.js"></script>
     </body>
 </html>
