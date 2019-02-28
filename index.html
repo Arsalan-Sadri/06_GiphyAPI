@@ -44,29 +44,46 @@
             <h1>Welcome to GIPHY API Web App</h1>
         </div>
         <div class="container">
-            <!-- ********** INPUT ROW ********** -->
+            <!-- ********** TOPICS ROWS ********** -->
             <div class="row">
                 <div class="col">
-                    <span>Enter a search term: </span>
-                    <input type="text" name="search-term" />
+                    <div>
+                        Click on any of search terms given below to see relevant gifs!
+                    </div>
+                    <div>
+                        Then click on any gifs to make it animate and click again to stop
+                        animation!
+                    </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col">
-                    <span>Enter the number of gifs: </span>
-                    <input type="text" name="input-cap" />
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <button type="submit" class="btn btn-primary btn-sm m-0 mt-2">
-                        Submit
-                    </button>
-                </div>
+                <div class="col topics-row"></div>
             </div>
 
-            <!-- ********** TOPICS ROW ********** -->
-            <div class="row my-5 topics-row"></div>
+            <!-- ********** INPUT ROWS ********** -->
+            <div class="row mt-4 mb-5">
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <span>Enter a search term: </span>
+                            <input type="text" name="search-term" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <span>Enter the number of gifs: </span>
+                            <input type="text" name="input-cap" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button type="submit" class="btn btn-primary btn-sm m-0 mt-2">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- ********** GIFS ROW ********** -->
             <div class="row">
