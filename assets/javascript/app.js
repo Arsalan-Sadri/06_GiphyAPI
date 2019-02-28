@@ -54,7 +54,7 @@ $('button[name="update"]').on("click", function(event) {
 });
 //
 
-//
+// CREATING AND ATTACHING A CLICK HANDLER TO TOGGLE BETWEEN STATIC AND ANIMATED MODES
 $(document.body).on("click", ".img-class", function() {
     if ($(this).attr("img-static") === "True") {
         $(this).attr("src", $(this).attr("animated-URL"));
@@ -64,7 +64,7 @@ $(document.body).on("click", ".img-class", function() {
         $(this).attr("img-static", "True");
     }
 });
-// Adding click event listener
+// CREATING AND ATTACHING A CLICK LISTENTER TO PULL GIFS FROM GIPHY UPON USER CLICK
 $(document.body).on("click", ".fetch-gif", function() {
     $(".gifs-div").empty();
     // Grabbing and storing the data property value from the button
