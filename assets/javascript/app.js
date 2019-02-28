@@ -36,7 +36,7 @@ function addBtn(topic) {
 }
 //
 var limit = 10;
-$('button[type="submit"]').on("click", function(event) {
+$('button[name="update"]').on("click", function(event) {
     event.preventDefault();
 
     var userLimit = $('input[name="input-cap"]')

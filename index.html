@@ -44,42 +44,57 @@
             <h1>Welcome to GIPHY API Web App</h1>
         </div>
         <div class="container">
-            <!-- ********** TOPICS ROWS ********** -->
-            <div class="row">
-                <div class="col">
-                    <div>
-                        Click on any of search terms given below to see relevant gifs!
+            <div class="row mb-5">
+                <!-- ********** TOPICS COL ********** -->
+                <div class="col-md-7">
+                    <div class="row">
+                        <div class="col">
+                            <ul>
+                                <li>
+                                    Click on any of search terms given below to see
+                                    relevant gifs!
+                                </li>
+                                <li>
+                                    Then click on any gifs to make it animate and click
+                                    again to stop animation!
+                                </li>
+                                <li>
+                                    You may also add a new search term of yours and/or
+                                    modify the number of gifs to be displayed.
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div>
-                        Then click on any gifs to make it animate and click again to stop
-                        animation!
+                    <div class="row">
+                        <div class="col topics-row"></div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col topics-row"></div>
-            </div>
-
-            <!-- ********** INPUT ROWS ********** -->
-            <div class="row mt-4 mb-5">
-                <div class="col">
+                <!-- ********** INPUT COL ********** -->
+                <div class="col-auto offset-md-1 mt-3 mt-md-0">
                     <div class="row">
                         <div class="col">
-                            <span>Enter a search term: </span>
-                            <input type="text" name="search-term" />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <span>Enter the number of gifs: </span>
-                            <input type="text" name="input-cap" />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <button type="submit" class="btn btn-primary btn-sm m-0 mt-2">
-                                Submit
-                            </button>
+                            <div class="row">
+                                <div class="col">
+                                    <div>Enter a search term:</div>
+                                    <input type="text" name="search-term" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div>Enter the number of gifs:</div>
+                                    <input type="text" name="input-cap" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button
+                                        name="update"
+                                        class="btn btn-primary btn-sm m-0 mt-2"
+                                    >
+                                        Update
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
