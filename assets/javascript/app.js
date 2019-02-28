@@ -1,8 +1,26 @@
-// 
+//
 var topicsArr = [
-    "Washington DC", "Chicago", "Los Angeles", "Vancouver", "Toronto", "London", "Berlin", "Budapest",
-    "Vienna", "Tehran", "Hong Kong", "Grand Canyon", "Paris", "Istanbul", "Dubai", "Barcelona",
-    "The Sahara", "Amazon Rainforest", "Yosemite", "Niagara Falls", "Persepolis"
+    "Washington DC",
+    "Chicago",
+    "Los Angeles",
+    "Vancouver",
+    "Toronto",
+    "London",
+    "Berlin",
+    "Budapest",
+    "Vienna",
+    "Tehran",
+    "Hong Kong",
+    "Grand Canyon",
+    "Paris",
+    "Istanbul",
+    "Dubai",
+    "Barcelona",
+    "The Sahara",
+    "Amazon Rainforest",
+    "Yosemite",
+    "Niagara Falls",
+    "Persepolis"
 ];
 // Page initialization
 for (i = 0; i < topicsArr.length; i++) {
@@ -18,26 +36,26 @@ function addBtn(topic) {
 }
 //
 var limit = 10;
-$('button[type="submit"]').on("click", function (event) {
+$('button[type="submit"]').on("click", function(event) {
     event.preventDefault();
 
-    var userLimit = $('input[name="input-cap"]').val().trim();
+    var userLimit = $('input[name="input-cap"]')
+        .val()
+        .trim();
     var userLimitNum = parseInt(userLimit);
     if (userLimitNum > 0) limit = userLimitNum;
     $('input[name="input-cap"]').val("");
 
-    var userInput = $('input[name="search-term"]').val().trim();
+    var userInput = $('input[name="search-term"]')
+        .val()
+        .trim();
     if (userInput !== "") addBtn(userInput);
     $('input[name="search-term"]').val("");
-})
+});
 //
 
-
-
-
-
-// 
-$(document.body).on("click", ".img-class", function () {
+//
+$(document.body).on("click", ".img-class", function() {
     if ($(this).attr("img-static") === "True") {
         $(this).attr("src", $(this).attr("animated-URL"));
         $(this).attr("img-static", "false");
@@ -47,42 +65,39 @@ $(document.body).on("click", ".img-class", function () {
     }
 });
 // Adding click event listener
-$(document.body).on("click", ".fetch-gif", function () {
+$(document.body).on("click", ".fetch-gif", function() {
     $(".gifs-div").empty();
     // Grabbing and storing the data property value from the button
     var btnData = $(this).attr("btn-data");
 
     // Constructing a queryURL using the btnData name
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-        btnData + "&api_key=2MnPgQlfrGbyTj7jZyIqCk6SdjMeFSPE&limit=" + limit;
+    var queryURL =
+        "https://api.giphy.com/v1/gifs/search?q=" +
+        btnData +
+        "&api_key=2MnPgQlfrGbyTj7jZyIqCk6SdjMeFSPE&limit=" +
+        limit;
 
     // Performing an AJAX request with the queryURL
     $.ajax({
-            url: queryURL,
-            method: "GET"
-        })
+        url: queryURL,
+        method: "GET"
+    })
         // After data comes back from the request
-        .then(function (response) {
+        .then(function(response) {
             // storing the data from the AJAX request in the gifArr variable
             var gifArr = response.data;
 
             // Looping through each result item
             for (var i = 0; i < gifArr.length; i++) {
-
-                // 
+                //
                 var imgDiv = $("<div>").css({
-                    "float": "left",
-                    "padding": "10px"
+                    float: "left",
+                    padding: "10px"
                 });
 
-                // 
-                var divTag = $("<div>").text("Rating: " + gifArr[i].rating);
-                imgDiv.append(divTag);
-                divTag = $("<div>").text("Title: " + gifArr[i].title);
-                imgDiv.append(divTag);
-                // 
+                // CREATING AN <IMG> TAG AND HAVE IT ADDED TO IMAGE DIV
                 var imgTag = $("<img>");
-                // 
+
                 imgTag.attr("static-URL", gifArr[i].images.fixed_height_still.url);
                 imgTag.attr("animated-URL", gifArr[i].images.fixed_height.url);
                 imgTag.attr("img-static", "True");
@@ -91,8 +106,15 @@ $(document.body).on("click", ".fetch-gif", function () {
 
                 imgDiv.append(imgTag);
 
-                $(".gifs-div").append(imgDiv);
+                // CREATING CAPTIONS AND HAVE THEM ADDED TO IMAGE DIV
+                var divTag = $("<div>").text("Rating: " + gifArr[i].rating);
+                imgDiv.append(divTag);
+                divTag = $("<div>").text("Title: " + gifArr[i].title);
 
+                imgDiv.append(divTag);
+
+                // HAVING IMAGE DIV ADDED TO THE GIFS DIV
+                $(".gifs-div").append(imgDiv);
             }
         });
 });
