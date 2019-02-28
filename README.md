@@ -9,7 +9,7 @@
 * To dynamically change the HTML of the page with the use of GIPHY API, JavaScript, and jQuery 
 * As it can be seen below, there are a number of topics you can choose from and the current theme is "location"
 
-<img src="Docs/Images/main_page.png" >
+<img src="Docs/Images/main_page.png" style="border: 1px solid grey" >
 
 * Once you hit your choice, the application pulls 10 gifs from GIPHY API and have them displayed on the page
 * For example, a 'paris' search term would look like this:
