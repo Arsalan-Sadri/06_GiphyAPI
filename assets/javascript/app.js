@@ -48,7 +48,7 @@ $(document.body).on("click", ".img-class", function () {
 });
 // Adding click event listener
 $(document.body).on("click", ".fetch-gif", function () {
-    $(".col-sm-9").empty();
+    $(".gifs-div").empty();
     // Grabbing and storing the data property value from the button
     var btnData = $(this).attr("btn-data");
 
@@ -91,7 +91,7 @@ $(document.body).on("click", ".fetch-gif", function () {
 
                 imgDiv.append(imgTag);
 
-                $(".col-sm-9").append(imgDiv);
+                $(".gifs-div").append(imgDiv);
 
             }
         });
