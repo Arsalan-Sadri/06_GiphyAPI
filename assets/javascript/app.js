@@ -76,10 +76,10 @@ $(document.body).on("click", ".fetch-gif", function () {
                 });
 
                 // 
-                var pTag = $("<p>").text("Rating: " + gifArr[i].rating);
-                imgDiv.append(pTag);
-                var pTag = $("<p>").text("Title: " + gifArr[i].title);
-                imgDiv.append(pTag);
+                var divTag = $("<div>").text("Rating: " + gifArr[i].rating);
+                imgDiv.append(divTag);
+                divTag = $("<div>").text("Title: " + gifArr[i].title);
+                imgDiv.append(divTag);
                 // 
                 var imgTag = $("<img>");
                 // 
