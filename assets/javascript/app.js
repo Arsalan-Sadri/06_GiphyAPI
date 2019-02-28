@@ -89,13 +89,13 @@ $(document.body).on("click", ".fetch-gif", function() {
 
             // Looping through each result item
             for (var i = 0; i < gifArr.length; i++) {
-                //
-                var imgDiv = $("<div>").css({
+                // CREATING A WRAPPER THAT WRAPS THE IMAGE AND ITS CAPTION
+                var imgWrapperDiv = $("<div>").css({
                     float: "left",
                     padding: "10px"
                 });
 
-                // CREATING AN <IMG> TAG AND HAVE IT ADDED TO IMAGE DIV
+                // CREATING AN <IMG> TAG AND HAVING IT ADDED TO IMAGE DIV
                 var imgTag = $("<img>");
 
                 imgTag.attr("static-URL", gifArr[i].images.fixed_height_still.url);
@@ -104,17 +104,33 @@ $(document.body).on("click", ".fetch-gif", function() {
                 imgTag.attr("src", gifArr[i].images.fixed_height_still.url);
                 imgTag.addClass("img-class");
 
-                imgDiv.append(imgTag);
+                imgWrapperDiv.append(imgTag);
 
-                // CREATING CAPTIONS AND HAVE THEM ADDED TO IMAGE DIV
-                var divTag = $("<div>").text("Rating: " + gifArr[i].rating);
-                imgDiv.append(divTag);
-                divTag = $("<div>").text("Title: " + gifArr[i].title);
+                // CREATING RATING AND TITLE CAPTIONS AND HAVE THEM ADDED TO IMAGE DIV
+                var captionDiv = $("<div>");
+                var spanTag = $("<span>");
+                spanTag.css({
+                    "font-weight": "bold"
+                });
 
-                imgDiv.append(divTag);
+                spanTag.text("Rating: ");
+                captionDiv.append(spanTag);
+                captionDiv.append(gifArr[i].rating);
+                imgWrapperDiv.append(captionDiv);
+
+                captionDiv = $("<div>");
+                spanTag = $("<span>");
+                spanTag.css({
+                    "font-weight": "bold"
+                });
+
+                spanTag.text("Title: ");
+                captionDiv.append(spanTag);
+                captionDiv.append(gifArr[i].title);
+                imgWrapperDiv.append(captionDiv);
 
                 // HAVING IMAGE DIV ADDED TO THE GIFS DIV
-                $(".gifs-div").append(imgDiv);
+                $(".gifs-div").append(imgWrapperDiv);
             }
         });
 });
