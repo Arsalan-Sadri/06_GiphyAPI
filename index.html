@@ -1,112 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!---------------- META TAGS ---------------->
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <!-- -------------- BOOTSTRAP 4 AND JQUERY CDN -------------- -->
-        <script
-            src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous"
-        ></script>
-        <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-            crossorigin="anonymous"
-        />
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-            crossorigin="anonymous"
-        ></script>
-        <!---------------- FONTAWESOME STYLING ---------------->
-        <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-            integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-            crossorigin="anonymous"
-        />
-        <!---------------- CUSTOM STYLING ---------------->
-        <link rel="stylesheet" href="assets/css/style.css" />
-        <title>Document</title>
-    </head>
+  <head>
+    <!---------------- META TAGS ---------------->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- -------------- BOOTSTRAP 4 AND JQUERY CDN -------------- -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <!---------------- FONTAWESOME STYLING ---------------->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+    <!---------------- CUSTOM STYLING ---------------->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Document</title>
+  </head>
 
-    <body>
-        <div class="jumbotron text-center">
-            <h1>Welcome to GIPHY API Web App</h1>
-        </div>
-        <div class="container">
-            <div class="row mb-5">
-                <!-- ********** TOPICS COL ********** -->
-                <div class="col-md-7">
-                    <div class="row">
-                        <div class="col">
-                            <ul>
-                                <li>
-                                    Click on any of search terms given below to see
-                                    relevant gifs!
-                                </li>
-                                <li>
-                                    Then click on any gifs to make it animate and click
-                                    again to stop animation!
-                                </li>
-                                <li>
-                                    You may also add a new search term of yours and/or
-                                    modify the number of gifs to be displayed.
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col topics-row"></div>
-                    </div>
-                </div>
-                <!-- ********** INPUT COL ********** -->
-                <div class="col-auto offset-md-1 mt-3 mt-md-0">
-                    <div class="row">
-                        <div class="col">
-                            <div class="row">
-                                <div class="col">
-                                    <div>Enter a search term:</div>
-                                    <input type="text" name="search-term" />
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <div>Enter the number of gifs:</div>
-                                    <input type="text" name="input-cap" />
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <button
-                                        name="update"
-                                        class="btn btn-primary btn-sm m-0 mt-2"
-                                    >
-                                        Update
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <body>
+    <div class="jumbotron text-center">
+      <h1>Welcome to GIPHY API Web App</h1>
+    </div>
+
+    <div class="container mb-5">
+      <div class="row mb-5">
+        <!-- ********** TOPICS COL ********** -->
+        <div class="col-md-7">
+          <div class="row">
+            <div class="col">
+              <ul>
+                <li>
+                  Click on any of search terms given below to see relevant gifs!
+                </li>
+                <li>
+                  Then click on any gifs to make it animate and click again to
+                  stop animation!
+                </li>
+                <li>
+                  You may also add a new search term of yours and/or modify the
+                  number of gifs to be displayed.
+                </li>
+              </ul>
             </div>
-
-            <!-- ********** GIFS ROW ********** -->
-            <div class="row">
-                <div class="col gifs-div"></div>
-            </div>
+          </div>
+          <div class="row">
+            <div class="col topics-row"></div>
+          </div>
         </div>
+        <!-- ********** INPUT COL ********** -->
+        <div class="col-auto offset-md-1 mt-3 mt-md-0">
+          <div class="row">
+            <div class="col">
+              <div class="row">
+                <div class="col">
+                  <div>Enter a search term:</div>
+                  <input type="text" name="search-term" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div>Enter the number of gifs:</div>
+                  <input type="text" name="input-cap" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <button name="update" class="btn btn-primary btn-sm m-0 mt-2">
+                    Update
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <!-- ********** MAIN SCRIPT ********** -->
-        <script src="assets/javascript/app.js"></script>
-    </body>
+      <!-- ********** GIFS ROW ********** -->
+      <div class="row">
+        <div class="col gifs-div"></div>
+      </div>
+    </div>
+
+    <!-- ********** FOOTER ********** -->
+    <div class="row footer">
+      <div class="col">
+        Designed and developed by
+        <a href="https://Arsalan-Sadri.github.io">Arsalan Sadri</a> | Copyright
+        © 2019 Arsalan Sadri | All rights reserved
+      </div>
+    </div>
+
+    <!-- ********** MAIN SCRIPT ********** -->
+    <script src="assets/javascript/app.js"></script>
+  </body>
 </html>

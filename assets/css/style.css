@@ -1,18 +1,39 @@
 /* STYLING INPUTS */
 input {
-    border: 2px solid rgb(209, 207, 207);
-    height: 23px;
-    border-radius: 5px;
+  border: 2px solid rgb(209, 207, 207);
+  height: 23px;
+  border-radius: 5px;
 }
 
 input[name="input-cap"] {
-    width: 50px;
+  width: 50px;
 }
 
 input[name="search-term"] {
-    width: 150px;
+  width: 150px;
 }
 
 .btn {
-    margin: 5px;
+  margin: 5px;
+}
+
+/********** 
+    FOOTER
+**********/
+.footer {
+  background: #4d636f;
+  color: white;
+  text-align: center;
+  font-size: 0.8rem;
+  height: 50px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* MAKING THE FOOTER STICK AT THE BOTTOM */
+.container {
+  min-height: calc(100vh - (184px + 50px));
 }
