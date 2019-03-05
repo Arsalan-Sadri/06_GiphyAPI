@@ -35,5 +35,5 @@ input[name="search-term"] {
 
 /* MAKING THE FOOTER STICK AT THE BOTTOM */
 .container {
-  min-height: calc(100vh - (184px + 50px));
+  min-height: calc(100vh - (184px + 32px + 50px));
 }
